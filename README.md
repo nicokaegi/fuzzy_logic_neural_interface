@@ -4,37 +4,37 @@
 This project was born out of the fuzzy sets course given by professor protman over at the university of fribourg switzerland. 
 
 The objective is two fold. 
-1. Discover ways of using fuzzy sets to interpret brain signals. 
-2. Evaluate them against traditional methods. By reusing old reinforcement learning enviroments to play games with your mind.
+1. Discover ways of using fuzzy sets to interpret brain signals from a Muse 2 eeg. 
+2. Evaluate them against traditional methods. By reusing old reinforcement learning enviroments to play games with your mind. (wip)
 
-## Installation
-To install this package, follow these steps:
+All done with a Muse 2 eeg headband. loaned out by the kind people of the [HUMAN-IST INSTITUTE](https://human-ist.unifr.ch/en/)
+## Brain Wave Model Training 
 
-1. Clone the repository using git: `git clone https://github.com/[owner]/[name].git`
-2. Navigate to the directory where you cloned the repository and run `npm install` or `yarn install`.
-3. If you're using a package manager other than npm or yarn, install dependencies manually.
-4. Start developing!
+To hit the ground running and train your own models do the following.
 
-## Usage
-To use this package in your project, follow these steps:
+### Training Installation And Usage
 
-1. Import the module into your code: `import { [Feature Name] } from '@[owner]/[name]'`
-2. Use the feature by calling a function or accessing an object property.
-3. If you need to customize the behavior of the feature, see the documentation for the package.
+1. Install the dependencies nessary for training  `pip install -r training_requirements.txt` 
+2. Get the dataset. (check the read me in the data folder)
+3. Have fun running the notebooks in model training.
+.
 
-## Development
-To contribute to this repository, follow these steps:
+#### After running these notebooks you should see a set of .h5 files populate the models folder. For you to import and intergate into your projects when needed.
 
-1. Clone the repository using git: `git clone https://github.com/[owner]/[name].git`
-2. Create a new branch for your changes: `git checkout -b [feature-branch]`
-3. Make your changes and commit them to the branch: `git add . && git commit -m '[description of changes]'`
-4. Push your changes to the remote repository: `git push origin [feature-branch]`
-5. Create a pull request on GitHub to merge your changes into the main branch.
+## Brainflow Streamer
 
-## Bugs and Feedback
-If you encounter any bugs or have feedback, feel free to open an issue on the GitHub repository.
-```
+To test if your eeg will work with our code run the following.
 
-This template provides a basic structure for a README file on GitHub that includes two hidden dropdown sections: "Installation" and "Development". The "Installation" section explains how to install the package using npm or yarn, 
-while the "Development" section explains how to contribute to the package by cloning the repository, creating branches, making changes, and submitting pull requests.
+### Brainflow Streamer Installation 
+
+1. Install the dependencies nessary for brainflow streaming `pip install -r brainflow_requirements.txt` 
+2. Run brainflow controller script `python brainflow_controller_prototype.py --board-id 39`
+
+The number one thing you need is the id of your eeg. For the muse 2 this is 39. For others you need to check with the [brainflows documentation]([myLib/README.md](https://brainflow.readthedocs.io/en/stable/SupportedBoards.html))  for the supported eegs.
+
+Do note, inspite of what Muse claims. You don't need a special dongle to run with a Muse 2 headset.  
+
+#### What you should see is an animated graph of the 5 basic brainwaves.  
+
+
 
