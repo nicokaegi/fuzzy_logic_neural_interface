@@ -1,12 +1,11 @@
 # Fuzzy Logic Neural Interface Project 
 
 ## Description
-This project was born out of the fuzzy sets course given by one perfssor portman 
+This project was born out of the fuzzy sets course given by professor protman over at the university of fribourg switzerland. 
 
-### Features
-- Feature 1
-- Feature 2
-- Feature 3
+The objective is two fold. 
+1. Discover ways of using fuzzy sets to interpret brain signals. 
+2. Evaluate them against traditional methods. By reusing old reinforcement learning enviroments to play games with your mind.
 
 ## Installation
 To install this package, follow these steps:
