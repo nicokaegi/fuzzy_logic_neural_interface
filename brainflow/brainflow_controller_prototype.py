@@ -3,7 +3,7 @@ import time
 
 import matplotlib
 
-#matplotlib.use('gtk4Agg')
+matplotlib.use('gtk4Agg')
 import matplotlib.pyplot as plt
 
 import numpy as np
@@ -84,6 +84,8 @@ def main():
         while True:
             data = board.get_current_board_data(sampling_rate)  # get all data and remove it from internal buffer
             eeg_channels = board_descr['eeg_channels']
+
+
             bands = DataFilter.get_avg_band_powers(data, eeg_channels, sampling_rate, True)
             feature_vector = bands[0]
             past_bands.append(feature_vector)
